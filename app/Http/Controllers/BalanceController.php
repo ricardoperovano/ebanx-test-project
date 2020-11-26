@@ -17,10 +17,10 @@ class BalanceController extends Controller
     {
         $account_id = request('account_id');
 
-        $account = (new Account())->getAccount($account_id);
+        $balance = (new Balance())->getBalance($account_id);
 
-        if ($account)
-            return response()->json($account->amount, 200);
+        if ($balance)
+            return response()->json($balance, 200);
 
         return response()->json(0, 404);
     }
