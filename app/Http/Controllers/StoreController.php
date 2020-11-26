@@ -13,6 +13,6 @@ class StoreController extends Controller
     {
         (new StoreService())->createStore();
 
-        return response()->json(null);
+        return "OK";
     }
 }
